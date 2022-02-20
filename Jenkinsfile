@@ -46,7 +46,7 @@ pipeline{
             }       
            
         }
-        stage('Deploy to Kubernetes'){
+        stage('Docker Deploy'){
            steps{
               script{
                      echo 'deploy later'
