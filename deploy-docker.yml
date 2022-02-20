@@ -1,6 +1,6 @@
-version: "3.8"
-services:
-    image: haffydockerid/maven-web-project
-    ports:
-      - "8090:8090"
 
+# version: "3.8"
+## services:
+ # #  image: haffydockerid/maven-web-project
+   # ports:
+    #  - "8090:8090"
