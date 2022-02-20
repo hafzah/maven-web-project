@@ -46,5 +46,15 @@ pipeline{
             }       
            
         }
+        stage('Deploy to Kubernetes'){
+           steps{
+              script{
+                     echo 'deploy later'
+              }
+
+           }
+        }
+           
     
+   }
 }
