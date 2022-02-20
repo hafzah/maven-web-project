@@ -22,6 +22,29 @@ pipeline{
                     }
                 }
             }
+     
+            stage('Build Docker Image'){
+                steps{
+                    script{
+                        bat 'docker build -t haffydockerid/maven-web-project -f Dockerfile .'
+                       
+                    }
+                }
+            }
+            
+            stage('Login & Push Image to Docker Hub'){
+                steps{
+                    script{
+                        //docker login
+                        // wanted to use withCredentials with access token - secret text but not working
+                        //this method below is not so advisable.
+                        withDockerRegistry(credentialsId: 'credentials') {
+                            //push image into repo
+                            bat 'docker push haffydockerid/maven-web-project'
+                    }
+                }
+            }       
+           
         }
     
 }
