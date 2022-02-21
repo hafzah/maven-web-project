@@ -17,7 +17,7 @@ pipeline{
            stage('Test'){
               steps{
                  script{
-                    bat 'mvn -f maven-web-project/pom.xml test'  
+                    bat 'mvn -f pom.xml test'  
                  }
                 
               }
