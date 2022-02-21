@@ -55,6 +55,16 @@ pipeline{
            }
         }
            
+           
+           
     
    }
+   
+   
+    post {
+        failure {
+    // One or more steps need to be included within each condition's block.
+           emailext attachLog: true, body: 'this is an error build failure event by jenkins', subject: 'This is the Failure build email', to: 'schoolpurpoze@gmail.com'
+        }
+    }
 }
