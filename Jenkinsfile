@@ -26,7 +26,7 @@ pipeline{
             stage('Build Docker Image'){
                 steps{
                     script{
-                        bat 'docker build -t haffydockerid/maven-web-project -f Dockerfile .'
+                        bat 'docker build -t haffydockerid/maven-web-project2 -f Dockerfile .'
                        
                     }
                 }
@@ -40,7 +40,7 @@ pipeline{
                         //this method below is not so advisable.
                         withDockerRegistry(credentialsId: 'credentials') {
                             //push image into repo
-                            bat 'docker push haffydockerid/maven-web-project'
+                            bat 'docker push haffydockerid/maven-web-project2'
                     }
                 }
             }       
