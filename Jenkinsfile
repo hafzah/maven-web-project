@@ -13,6 +13,15 @@ pipeline{
                     bat 'mvn -f pom.xml clean install test'
                 }
             }
+           
+           stage('Test'){
+              steps{
+                 script{
+                    bat 'mvn -f maven-web-project/pom.xml test'  
+                 }
+                
+              }
+           }
             
             //assuming startup.bat is running
             stage('Deploy To Tomcat'){
