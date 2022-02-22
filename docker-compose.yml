@@ -8,7 +8,3 @@ services:
       - 8081:8080
       - 50000:50000
     container_name: dply2
-    volumes:
-      - /tmp/jenkins:/var/jenkins_home #Remember that, the tmp directory is designed to be wiped on system reboot.
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /usr/local/bin/docker:/usr/local/bin/docker
