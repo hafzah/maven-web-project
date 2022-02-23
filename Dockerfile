@@ -3,5 +3,5 @@
 FROM tomcat:8
 ADD target/*.war /usr/local/tomcat/webapps/
 
-CMD ["catalina.bat", "run"]
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
 #CMD ["catalina.sh","run"]
