@@ -3,5 +3,5 @@
 FROM tomcat:8
 ADD target/lesson14-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
 
-CMD ["catalina.sh", "run"]
+CMD ["startup.bat", "run"]
 #CMD ["catalina.sh","run"]
